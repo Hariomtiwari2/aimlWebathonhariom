@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+    <title>A98 hariom tiwari</title>
+    <link rel="stylesheet" href="C:\Users\admin\Desktop\webathon 2023\hariomtiwari.css">
+</head>
+<body>
+        <div class="wp">
+        <div class="up">
+            <div>
+                <div id="heading"><h3 style="align-items: center;">hi <br>this is hariom</h3></div><div class="abuotme"><p style="padding-bottom: 10px;">web developer</p><p style="padding-bottom: 10px;">Java developer</p><P>Python developer</P></div>
+                
+                <span id="span1"><p>home</p><p>myself</p><p>know more</p></span>
+            </div>
+        </div>
+        <div class="btwtwo"><hr></div>
+        <div class="lp">
+            <form id="myForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                
+        
+                <button type="button" id="saveButton">Save Data to Text File</button>
+            </form>
+        
+            <script>
+                document.getElementById("saveButton").addEventListener("click", function() {
+                    // Get form data
+                    var name = document.getElementById("name").value;
+                    var email = document.getElementById("email").value;
+        
+                    // Create a string with the data
+                    var data = "Name: " + name + "\nEmail: " + email;
+        
+                    // Create a Blob with the data
+                    var blob = new Blob([data], { type: "text/plain" });
+        
+                    // Create a URL for the Blob
+                    var url = window.URL.createObjectURL(blob);
+        
+                    // Create a link element for downloading
+                    var a = document.createElement("a");
+                    a.href = url;
+                    a.download = "formData.txt"; // The filename for the text file
+                    a.style.display = "none";
+        
+                    // Append the link to the document and trigger a click event to download the file
+                    document.body.appendChild(a);
+                    a.click();
+        
+                    // Clean up
+                    document.body.removeChild(a);
+                    window.URL.revokeObjectURL(url);
+                });
+            </script>
+             <script>
+        function validateForm() {
+            const emailInput = document.getElementById("email");
+            const emailError = document.getElementById("emailError");
+
+            if (!emailInput.checkValidity()) {
+                emailError.textContent = "Please enter a valid email address.";
+                emailError.style.display = "block";
+                return false;
+            } else {
+                emailError.style.display = "none";
+                return true;
+            }
+        }
+    </script>
+        </div>
+        </div>
+    
+    </div>
+    
+</body>

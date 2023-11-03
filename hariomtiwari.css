@@ -1,0 +1,47 @@
+.up{
+    background-color: #e91ea9;
+    border-style: groove;
+    border-color: darkblue;
+    border-width: 10px;
+    width: 1625px;
+    height: 500px;
+            
+}
+
+
+.lp{
+    background-color: darkblue;
+    border-style: groove;
+    border-color: black;
+    border-width: 12;
+    width: 1625;
+    height: 400px;
+}
+
+
+.btwtwo{
+    width: fit-content;
+}
+
+#span1{
+    align-content: end;
+    background-color: brown;
+    color: whitesmoke;
+}
+
+#heading{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: burlywood;
+    width: 700px;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+.abuotme{
+    align-self: center;
+    border-style: dotted;
+    border-color: black;
+    background-color:greenyellow;
+
+}
